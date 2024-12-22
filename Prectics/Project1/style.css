@@ -1,0 +1,21 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.container{
+   background-color: #EEFD;
+   height: 100vh;
+   border: 10px solid  #1D1E4C;
+    display: flex;
+
+}
+
+.content{
+
+    max-width: 900px;
+    margin: 0 auto;
+    
+}

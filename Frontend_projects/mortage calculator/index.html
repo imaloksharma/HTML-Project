@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-50 p-8">
+
+    <!-- Mortgage Calculator Section -->
+    <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">Mortgage Calculator</h1>
+        <p class="text-gray-600 mb-6">
+            Our mortgage calculator includes key factors like homeowners association fees, property taxes, home insurance, and private mortgage insurance (PMI).
+            Get the full picture and calculate your total monthly payment.
+        </p>
+
+        <!-- Input Section -->
+        <div class="flex items-center space-x-4 mb-6">
+            <div class="w-1/3">
+                <label class="text-gray-700 font-semibold">Home price</label>
+                <input type="number" id="homePrice" class="w-full p-2 mt-2 border rounded-md" value="300000">
+            </div>
+            <div class="w-1/3">
+                <label class="text-gray-700 font-semibold">Down payment</label>
+                <div class="flex items-center mt-2">
+                    <input type="number" id="downPayment" class="w-full p-2 border rounded-md" value="60000">
+                    <span class="ml-2">%</span>
+                </div>
+            </div>
+            <div class="w-1/3">
+                <label class="text-gray-700 font-semibold">Loan term</label>
+                <select id="loanTerm" class="w-full p-2 mt-2 border rounded-md">
+                    <option value="30">30 years</option>
+                    <option value="15">15 years</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="flex items-center space-x-4 mb-6">
+            <div class="w-1/2">
+                <label class="text-gray-700 font-semibold">Interest rate</label>
+                <input type="number" step="0.01" id="interestRate" class="w-full p-2 mt-2 border rounded-md" value="5">
+            </div>
+            <div class="w-1/2">
+                <label class="text-gray-700 font-semibold">Property tax</label>
+                <input type="number" id="propertyTax" class="w-full p-2 mt-2 border rounded-md" value="200">
+            </div>
+        </div>
+
+        <!-- Monthly Payment Display -->
+        <div class="text-center bg-gray-100 p-4 rounded-lg my-4">
+            <p class="text-xl font-semibold">Monthly Payment</p>
+            <p id="monthlyPayment" class="text-3xl font-bold text-green-600">$2,146/mo</p>
+        </div>
+
+        <!-- Monthly Payment Breakdown Section -->
+        <div class="flex items-start space-x-8 my-8">
+            <div class="flex flex-col items-start">
+                <h2 class="text-lg font-semibold mb-4">Monthly payment breakdown</h2>
+                <p id="monthlyPaymentBreakdown" class="text-3xl font-bold text-gray-800">$2,643/mo</p>
+
+                <!-- Color Bars -->
+                <div class="flex space-x-2 mt-6">
+                    <div class="w-20 h-6 bg-green-600 rounded-full"></div>
+                    <div class="w-6 h-6 bg-purple-600 rounded-full"></div>
+                    <div class="w-6 h-6 bg-blue-600 rounded-full"></div>
+                    <div class="w-6 h-6 bg-yellow-600 rounded-full"></div>
+                    <div class="w-6 h-6 bg-orange-600 rounded-full"></div>
+                </div>
+            </div>
+
+            <!-- Labels and Input Boxes -->
+            <div class="space-y-4">
+                <div class="flex justify-between">
+                    <p class="text-gray-700">Principal & Interest</p>
+                    <input type="text" id="principalInterest" class="w-20 p-2 border rounded-md" value="2014">
+                </div>
+                <div class="flex justify-between">
+                    <p class="text-gray-700">Property Taxes</p>
+                    <input type="text" id="propertyTaxes" class="w-20 p-2 border rounded-md" value="265">
+                </div>
+                <div class="flex justify-between">
+                    <p class="text-gray-700">Homeowners Insurance</p>
+                    <input type="text" id="homeownersInsurance" class="w-20 p-2 border rounded-md" value="132">
+                </div>
+                <div class="flex justify-between">
+                    <p class="text-gray-700">HOA Fees</p>
+                    <input type="text" id="hoaFees" class="w-20 p-2 border rounded-md" value="132">
+                </div>
+                <div class="flex justify-between">
+                    <p class="text-gray-700">Utilities</p>
+                    <input type="text" id="utilities" class="w-20 p-2 border rounded-md" value="100">
+                </div>
+                <button class="mt-4 px-4 py-2 bg-gray-200 text-gray-800 rounded-lg font-semibold">
+                    Copy estimate link
+                </button>
+            </div>
+        </div>
+
+        <!-- Information Sections -->
+        <div class="border-t border-gray-200 mt-8 pt-6">
+            <h2 class="text-xl font-semibold mb-2">How does a mortgage calculator help me?</h2>
+            <p class="text-gray-700">
+                When deciding how much house you can afford, one of the most important pieces is determining whether a home will fit into your monthly budget. 
+                A mortgage calculator helps you estimate the monthly cost of a home. You can see how it will change based on different down payments and interest rates to find a comfortable range.
+            </p>
+        </div>
+
+        <!-- Debt-to-Income Ratio Section -->
+        <div class="border-t border-gray-200 mt-8 pt-6">
+            <h2 class="text-xl font-semibold mb-4">How much monthly mortgage payment can I afford?</h2>
+            <p class="text-gray-700">
+                Lenders determine how much you can afford on a monthly housing payment by calculating your 
+                <a href="#" class="text-green-600 underline">debt-to-income ratio (DTI)</a>. 
+                The maximum DTI you can have in order to qualify for most mortgage loans is often between 45–50%, with your anticipated housing costs included.
+            </p>
+            <p class="text-gray-700 mt-2">
+                Your DTI is the balance between your income and your debt. It helps lenders understand how safe or risky it is for them to approve your loan. 
+                A DTI ratio represents how much of your gross monthly income is spoken for by creditors, and how much of it is left over to you as disposable income. 
+                It's most commonly written as a percentage. For example, if you pay half your monthly income in debt payments, you would have a DTI of 50%.
+            </p>
+
+            <!-- DTI Formula Display -->
+            <div class="bg-gray-100 p-6 rounded-lg my-6">
+                <p class="text-lg font-semibold text-center mb-4">Formula for calculating your debt-to-income (DTI) ratio:</p>
+                <p class="text-2xl font-bold text-green-700 text-center">
+                    Monthly Debt Payments ÷ Monthly Gross Income × 100 = Debt-to-Income Ratio
+                </p>
+            </div>
+
+            <!-- Example DTI Calculation -->
+            <p class="text-lg font-semibold mb-4">Here’s an example of what calculating your DTI might look like:</p>
+            <div class="flex space-x-6">
+                <!-- Debts Column -->
+                <div class="flex-1 bg-gray-100 p-4 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-2">Debts</h3>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>Auto loan: $350/month</li>
+                        <li>Student loans: $220/month</li>
+                        <li>Credit cards: $130/month</li>
+                        <li>Expected housing costs: $1,800/month</li>
+                    </ul>
+                    <p class="mt-4 font-bold text-green-700 text-lg">$2,500 monthly debt obligation</p>
+                </div>
+                
+                <!-- Income Column -->
+                <div class="flex-1 bg-gray-100 p-4 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-2">Income</h3>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>Monthly salary: $5,000/month</li>
+                        <li>Monthly side-gig income: $1,500/month

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 100px auto; padding: 20px; }
+        .chatbox { border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: auto; }
+        .inputbox { width: 100%; padding: 10px; margin-top: 10px; }
+        .user-msg { color: blue; }
+        .bot-msg { color: green; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="chatbox" id="chatbox">
+            <p>Bot: Hello! How can I help you today?</p>
+        </div>
+        <input type="text" id="userInput" class="inputbox" placeholder="Type your message here...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var userMessage = $("#userInput").val();
+            if (userMessage) {
+                $("#chatbox").append("<p class='user-msg'>You: " + userMessage + "</p>");
+                $.post("/get", { msg: userMessage }, function(data) {
+                    $("#chatbox").append("<p class='bot-msg'>Bot: " + data.response + "</p>");
+                });
+                $("#userInput").val("");
+            }
+        }
+    </script>
+</body>
+</html>

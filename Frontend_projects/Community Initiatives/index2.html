@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community-Based Initiatives</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        nav {
+            background: #333;
+            padding: 0.5rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+
+        .hero {
+            background: url('https://i.pinimg.com/1200x/3f/03/df/3f03dfbd10352782852cfcff28cdc1db.jpg') no-repeat center center/cover;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .about {
+            text-align: center;
+        }
+
+        .initiatives {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .initiative {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .initiative img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .initiative h3 {
+            background: #f4f4f4;
+            margin: 0;
+            padding: 1rem;
+        }
+
+        .testimonial {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        .contact form {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .technical-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .technical-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .dark-mode nav {
+            background: #1e1e1e;
+        }
+
+        .dark-mode nav ul li a {
+            color: #e0e0e0;
+        }
+
+        .dark-mode footer {
+            background: #1e1e1e;
+        }
+
+        #darkModeToggle {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            padding: 0.5rem 1rem;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #darkModeToggle:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Community-Based Initiatives</h1>
+        <p>Empowering communities through collaboration and innovation</p>
+        <button id="darkModeToggle">🌙 Dark Mode</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#initiatives">Initiatives</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#technical">Technical</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Creating a Better Future Together</h1>
+    </div>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We are a community-driven organization committed to fostering growth, sustainability, and progress through local initiatives and collaborations. Join us on this journey!</p>
+    </section>
+
+    <section id="initiatives" class="initiatives">
+        <h2>Our Initiatives</h2>
+        <div class="initiative">
+            <img src="https://i.pinimg.com/736x/78/79/6d/78796d07e4792bb818cb079a1b57a791.jpg" alt="Initiative 1">
+            <h3>Green Communities Project</h3>
+            <p>Encouraging urban gardening and eco-friendly living.</p>
+        </div>
+        <div class="initiative">
+            <img src="https://i.pinimg.com/736x/3b/bc/c8/3bbcc805505a0fd0ca31c0b9d5d99ee4.jpg" alt="Initiative 2">
+            <h3>Skill Development Workshops</h3>
+            <p>Empowering individuals with essential skills for the future.</p>
+        </div>
+        <div class="initiative">
+            <img src="https://i.pinimg.com/736x/3b/bc/c8/3bbcc805505a0fd0ca31c0b9d5d99ee4.jpg" alt="Initiative 3">
+            <h3>Health and Wellness Camps</h3>
+            <p>Promoting physical and mental well-being in communities.</p>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>What People Say</h2>
+        <blockquote class="testimonial">
+            "The Green Communities Project transformed our neighborhood. Thank you!" - Sarah, Community Member
+        </blockquote>
+        <blockquote class="testimonial">
+            "The workshops gave me the confidence and skills to start my business!" - Ravi, Participant
+        </blockquote>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <section id="technical" class="technical">
+        <h2>Technical Highlights</h2>
+        <div class="technical-images">
+            <img src="https://i.pinimg.com/736x/e2/29/67/e229672c83df7d5ffafcf6ec258a8bd7.jpg" alt="Technical Image 1">
+            <img src="https://i.pinimg.com/736x/28/c3/32/28c3321d543049a7048a8c3dcbc6d35f.jpg" alt="Technical Image 2">
+            <img src="https://i.pinimg.com/736x/b5/2e/1b/b52e1bda727bfef50a9cb7656d1e597c.jpg" alt="Technical Image 3">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Community-Based Initiatives. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                darkModeToggle.textContent = '☀️ Light Mode';
+            } else {
+                darkModeToggle.textContent = '🌙 Dark Mode';
+            }
+        });
+    </script>
+</body>
+</html>

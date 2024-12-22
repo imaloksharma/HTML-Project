@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0vh;
+  font-family: "Times New Roman", Times, serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav.light-mode {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+nav.dark-mode {
+  background-color: #333;
+  color: #f8f9fa;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit; /* Ensure the color inherits from the nav */
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
